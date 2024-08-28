@@ -10,3 +10,7 @@ Belajar OpenCV Object Detection
 	- Image Input & Output
 	- Image Resizing & Croping
 	- OpenCV Drawing (line, Rectangle & Text)
+- Pertemuan 2 : [OpenCV - Basic Image Manipulation & Transformation](https://github.com/Muhammad-Yunus/Belajar-OpenCV-ObjectDetection/tree/main/Pertemuan%202)
+	- Image Thresholding
+	- Color Segmentation
+	- Contour Analysis
