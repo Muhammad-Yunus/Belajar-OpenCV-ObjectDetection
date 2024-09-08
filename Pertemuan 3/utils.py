@@ -92,7 +92,7 @@ class Utils :
             for i in range(rows):
                 classes_scores = outputs[0][i][4:]
                 (minScore, maxScore, minClassLoc, (x, maxClassIndex)) = cv2.minMaxLoc(classes_scores)
-                if maxScore >= 0.25:
+                if maxScore >= 0.35:
                     box = [
                         outputs[0][i][0] - (0.5 * outputs[0][i][2]),
                         outputs[0][i][1] - (0.5 * outputs[0][i][3]),
@@ -104,7 +104,7 @@ class Utils :
                     class_ids.append(maxClassIndex)
 
             # Apply NMS (Non-maximum suppression)
-            result_boxes = cv2.dnn.NMSBoxes(boxes, scores, 0.25, 0.45, 0.5)
+            result_boxes = cv2.dnn.NMSBoxes(boxes, scores, confThreshold, nmsThreshold)
 
             # Iterate through NMS results to draw bounding boxes and labels
             for i in range(len(result_boxes)):
