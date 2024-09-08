@@ -14,3 +14,9 @@ Belajar OpenCV Object Detection
 	- Image Thresholding
 	- Color Segmentation
 	- Contour Analysis
+- Pertemuan 3 : [Intro Object Detection & Object Detection Inferencing](https://github.com/Muhammad-Yunus/Belajar-OpenCV-ObjectDetection/tree/main/Pertemuan%203)
+	- Intro Object Detection
+	- Intro Object Detection Model (YOLO)
+	- Object Detection Inferencing Yolo Model - Darknet
+	- Object Detection Inferencing Yolo Model - PyTorch + ONNX
+	- Object Detection Inferencing Grove Vision AI Module V2
