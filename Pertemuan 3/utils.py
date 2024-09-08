@@ -37,7 +37,7 @@ class Utils :
                         confThreshold = 0.5, nmsThreshold = 0.3, font_size=0.8, 
                         color=(255,127,0), text_color=(255,255,255)):
 
-            frame_h, frame_w, frame_c = frame.shape
+            frame_h, frame_w, ___ = frame.shape
 
             classIds = []
             confidences = []
@@ -67,18 +67,17 @@ class Utils :
                 h = box[3]
 
                 label = '%s: %.1f%%' % (classes[classIds[i]], (confidences[i]*100))
-                print(label)
                 frame = self.draw_ped(frame, label, x, y, x+w, y+h, color=color, text_color=text_color, font_size=font_size)
             
             return frame
 
     def postprocess_onnx(self, outs, frame, classes, 
                         confThreshold = 0.5, nmsThreshold = 0.3, font_size=0.8, 
-                        color=(255,127,0), text_color=(255,255,255)):
+                        color=(255,127,0), text_color=(255,255,255), input_size=[320,320]):
 
-            [height, width, _] = frame.shape
-            length = max((height, width))
-            scale = length / 640
+            frame_h, frame_w, ___ = frame.shape
+            scale_horizontal = frame_w / input_size[0]
+            scale_vertical = frame_h / input_size[1]
 
             # Prepare output array
             outputs = np.array([cv2.transpose(outs[0])])
@@ -91,17 +90,16 @@ class Utils :
             # Iterate through output to collect bounding boxes, confidence scores, and class IDs
             for i in range(rows):
                 classes_scores = outputs[0][i][4:]
-                (minScore, maxScore, minClassLoc, (x, maxClassIndex)) = cv2.minMaxLoc(classes_scores)
-                if maxScore >= 0.35:
-                    box = [
-                        outputs[0][i][0] - (0.5 * outputs[0][i][2]),
-                        outputs[0][i][1] - (0.5 * outputs[0][i][3]),
-                        outputs[0][i][2],
-                        outputs[0][i][3],
-                    ]
-                    boxes.append(box)
-                    scores.append(maxScore)
-                    class_ids.append(maxClassIndex)
+                (___, maxScore, ____, (x, maxClassIndex)) = cv2.minMaxLoc(classes_scores)
+                c_x = int(outputs[0][i][0] * scale_horizontal)
+                c_y = int(outputs[0][i][1] * scale_vertical)
+                w = int(outputs[0][i][2] * scale_horizontal)
+                h = int(outputs[0][i][3] * scale_vertical)
+                x = int(c_x - w / 2)
+                y = int(c_y - h / 2)
+                scores.append(maxScore)
+                class_ids.append(maxClassIndex)
+                boxes.append([x, y, w, h])
 
             # Apply NMS (Non-maximum suppression)
             result_boxes = cv2.dnn.NMSBoxes(boxes, scores, confThreshold, nmsThreshold)
@@ -110,11 +108,11 @@ class Utils :
             for i in range(len(result_boxes)):
                 index = result_boxes[i]
                 box = boxes[index]
+                x = box[0]
+                y = box[1]
+                w = box[2]
+                h = box[3]
+
                 label = '%s: %.1f%%' % (classes[class_ids[index]], (scores[index]*100))
-                x = round(box[0] * scale)
-                y = round(box[1] * scale)
-                w = round(box[2] * scale)
-                h = round(box[3] * scale)
-                print(label)
                 frame = self.draw_ped(frame, label, x, y, x+w, y+h, color=color, text_color=text_color, font_size=font_size) 
             return frame
