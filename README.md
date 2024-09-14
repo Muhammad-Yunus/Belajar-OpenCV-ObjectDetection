@@ -20,3 +20,9 @@ Belajar OpenCV Object Detection
 	- Object Detection Inferencing Yolo Model - Darknet
 	- Object Detection Inferencing Yolo Model - PyTorch + ONNX
 	- Object Detection Inferencing Grove Vision AI Module V2
+- Pertemuan 4 : [Training Model Yolo V4 Tiny using Custom Dataset](https://github.com/Muhammad-Yunus/Belajar-OpenCV-ObjectDetection/tree/main/Pertemuan%204)
+	- Intro to Training Object Detection Process
+	- Intro to Dataset Annotation
+	- Annotate Dataset Using Roboflow
+	- Training Yolo V4 Tiny using Custom Dataset with Darknet Framework (Google Colab)
+	- Inference Trained Yolo V4 Tiny model in OpenCV DNN
