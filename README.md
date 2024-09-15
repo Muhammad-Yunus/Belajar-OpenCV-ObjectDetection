@@ -31,4 +31,4 @@ Belajar OpenCV Object Detection
 	- Training Yolo V8 using Custom Dataset with Ultralytics Framework + Pytorch (Google Colab)
 	- Inference Trained Yolo V8 ONNX model in OpenCV DNN
 	- Intro to Autodistill + Grounding DINO 
-	- Automatic Dataset Annotation using Autodistill + Grounding DINO
+	- Automatic Dataset Annotation using Autodistill + Grounding DINO (Google Colab)
