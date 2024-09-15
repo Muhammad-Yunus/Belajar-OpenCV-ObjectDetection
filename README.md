@@ -26,8 +26,8 @@ Belajar OpenCV Object Detection
 	- Annotate Dataset Using Roboflow
 	- Training Yolo V4 Tiny using Custom Dataset with Darknet Framework (Google Colab)
 	- Inference Trained Yolo V4 Tiny model in OpenCV DNN
-- Pertemuan 5 : [Training Model Yolo V8 using Ultralytics & Automatic Annotation using Autodistill + Grounding DINO](https://github.com/Muhammad-Yunus/Belajar-OpenCV-ObjectDetection/tree/main/Pertemuan%205)
-	- Intro to Ultralytics Framework +& Pytorch
+- Pertemuan 5 : [Training Model Yolo V8 using Ultralytics & Auto Annotation using Autodistill + Grounding DINO](https://github.com/Muhammad-Yunus/Belajar-OpenCV-ObjectDetection/tree/main/Pertemuan%205)
+	- Intro to Ultralytics Framework & Pytorch
 	- Training Yolo V8 using Custom Dataset with Ultralytics Framework + Pytorch (Google Colab)
 	- Inference Trained Yolo V8 ONNX model in OpenCV DNN
 	- Intro to Autodistill + Grounding DINO 
