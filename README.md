@@ -32,3 +32,9 @@ Belajar OpenCV Object Detection
 	- Inference Trained Yolo V8 ONNX model in OpenCV DNN
 	- Intro to Autodistill + Grounding DINO 
 	- Automatic Dataset Annotation using Autodistill + Grounding DINO (Google Colab)
+- Pertemuan 6 : [Object Counting using OpenCV DNN vs Supervision](https://github.com/Muhammad-Yunus/Belajar-OpenCV-ObjectDetection/tree/main/Pertemuan%206)
+	- Intro to Object Counting
+	- Simple OpenCV DNN Object Counting
+	- OpenCV DNN Object Counting in Region of Interest (ROI) Polygon
+	- Intro to Supervision
+	- Object Counting using Supervision PolygonZone
