@@ -38,3 +38,7 @@ Belajar OpenCV Object Detection
 	- OpenCV DNN Object Counting in Region of Interest (ROI) Polygon
 	- Intro to Supervision
 	- Object Counting using Supervision PolygonZone
+- Pertemuan 7 : [Two Stage Object Detection - Intro](https://github.com/Muhammad-Yunus/Belajar-OpenCV-ObjectDetection/tree/main/Pertemuan%207)
+	- Intro to Two Stage Object Detection
+	- Experiment With Region Proposal (Selective Search and Region Proposal Network)
+	- Inference pretrained Faster R-CNN with Backbone ResNet-50 using Torchvision
