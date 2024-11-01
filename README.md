@@ -44,5 +44,5 @@ Belajar OpenCV Object Detection
 	- Inference pretrained Faster R-CNN with ResNet-50 Backbone using Torchvision
 - Pertemuan 8 : [Transfer Learning Faster R-CNN with ResNet-50 Backbone](https://github.com/Muhammad-Yunus/Belajar-OpenCV-ObjectDetection/tree/main/Pertemuan%208)
 	- Transfer Learning Faster R-CNN with ResNet-50 Backbone using Custom Dataset
-	- Inference trained Faster R-CNN with ResNet-50 Backbone using OpenCV DNN & ONNX Runtime 
-	- Object Counting Faster R-CNN with ResNet-50 Backbone using OpenCV DNN & Supervision
+	- Inference trained Faster R-CNN with ResNet-50 Backbone using ONNX Runtime 
+	- Object Counting Faster R-CNN with ResNet-50 Backbone using Supervision
