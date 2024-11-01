@@ -244,3 +244,18 @@ class Utils :
                 cv2.putText(frame, label_text, (x_min, y_min - baseline), cv2.FONT_HERSHEY_SIMPLEX, font_size, text_color, 1)
         
         return frame
+
+    def rescale_box(self, boxes, original_image, input_size=[224,224]):
+        h, w, _ = original_image.shape
+        scale_hor = w / input_size[0]
+        scale_ver = h / input_size[1]
+        new_box = []
+        for box in boxes :
+            x_min, y_min, x_max, y_max = box
+            x_min = int(x_min * scale_hor)
+            x_max = int(x_max * scale_hor)
+            y_min = int(y_min * scale_ver)
+            y_max = int(y_max * scale_ver)
+            new_box.append([x_min, y_min, x_max, y_max])
+        print(new_box)
+        return np.array(new_box)
