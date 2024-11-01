@@ -41,4 +41,8 @@ Belajar OpenCV Object Detection
 - Pertemuan 7 : [Two Stage Object Detection - Intro](https://github.com/Muhammad-Yunus/Belajar-OpenCV-ObjectDetection/tree/main/Pertemuan%207)
 	- Intro to Two Stage Object Detection (R-CNN, Fast R-CNN, Faster R-CNN)
 	- Experiment With Region Proposal (Selective Search and Region Proposal Network)
-	- Inference pretrained Faster R-CNN with Backbone ResNet-50 using Torchvision
+	- Inference pretrained Faster R-CNN with ResNet-50 Backbone using Torchvision
+- Pertemuan 8 : [Transfer Learning Faster R-CNN with ResNet-50 Backbone](https://github.com/Muhammad-Yunus/Belajar-OpenCV-ObjectDetection/tree/main/Pertemuan%208)
+	- Transfer Learning Faster R-CNN with ResNet-50 Backbone using Custom Dataset
+	- Inference trained Faster R-CNN with ResNet-50 Backbone using OpenCV DNN & ONNX Runtime 
+	- Object Counting Faster R-CNN with ResNet-50 Backbone using OpenCV DNN & Supervision
